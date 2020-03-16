@@ -7,34 +7,28 @@
  */
 
 import 'react-native-gesture-handler';
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import First from './app/scenes/First';
 import Second from './app/scenes/Second';
 
-const Stack = createStackNavigator();
-
-function App() {
-    return (
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            title: 'Balance',
-            headerStyle: {
-              backgroundColor: 'green',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-          }}
-        >
-          <Stack.Screen name="First" component={First} />
-          <Stack.Screen name="Second" component={Second} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    );
-}
-
-export default App;
+const AppNavigator = createStackNavigator(
+  {
+    First: First,
+    Second: Second,
+  },
+  {
+    initialRouteName: 'First',
+    defaultNavigationOptions: {
+      title: 'Balance',
+      headerStyle: {
+        backgroundColor: 'green',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }
+  }
+);
+export default createAppContainer(AppNavigator);
