@@ -33,6 +33,7 @@ class Second extends React.Component {
 
   render() {
     const { navigation } = this.props;
+
     return (
         <ImageBackground source={IMAGES.bg} style={styles.container}>
           <FlatList
@@ -41,7 +42,7 @@ class Second extends React.Component {
             extraData= {this.state}
             renderItem={ ({item, index}) =>
             <TouchableWithoutFeedback onPress={ () => this.actionOnRow(item, index)}>
-                <View key={index} style={styles.view_list}>
+                <View key={index} style= { (navigation.getParam('index') == 2 && index != 3) ? styles.view_list2 : styles.view_list}>
                   <Image source={item.image} style={styles.image}/>
                 </View>
             </TouchableWithoutFeedback>

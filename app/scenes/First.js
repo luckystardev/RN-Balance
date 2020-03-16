@@ -16,8 +16,8 @@ export default class First extends React.Component {
         { image: IMAGES.m0, type:  0, data:Model.list0 },
         { image: IMAGES.m1, type:  0, data:Model.list1 },
         { image: IMAGES.m2, type:  0, data:Model.list2 },
-        { image: IMAGES.m3, type:  0, data:null },
-        { image: IMAGES.m4, type:  0, data:null },
+        { image: IMAGES.m3, type:  0, data:Model.list3 },
+        { image: IMAGES.m4, type:  0, data:Model.list4 },
         { image: IMAGES.m5, type:  0, data:null },
         { image: IMAGES.m6, type:  1, data:null },
         { image: IMAGES.m7, type:  0, data:null },
@@ -31,8 +31,8 @@ export default class First extends React.Component {
   }
 
   actionOnRow(item, index) {
-    console.log('Selected Item :',item.data);
-    if (item.type == 1) {
+    console.log(index);
+    if (item.type == 1) { //text
       //TODO
       return;
     }
