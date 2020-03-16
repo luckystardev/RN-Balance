@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import IMAGES from '../global/Image';
 import Model from '../global/Model';
+import NType from '../global/NType';
 
 const deviceWidth = Dimensions.get('window').width;
 const height_list = deviceWidth / 329 * 247;
@@ -13,26 +14,26 @@ export default class First extends React.Component {
     super(props);
     this.state = {
       data_list: [
-        { image: IMAGES.m0, type:  0, data:Model.list0 },
-        { image: IMAGES.m1, type:  0, data:Model.list1 },
-        { image: IMAGES.m2, type:  0, data:Model.list2 },
-        { image: IMAGES.m3, type:  0, data:Model.list3 },
-        { image: IMAGES.m4, type:  0, data:Model.list4 },
-        { image: IMAGES.m5, type:  0, data:null },
-        { image: IMAGES.m6, type:  1, data:null },
-        { image: IMAGES.m7, type:  0, data:null },
-        { image: IMAGES.m8, type:  0, data:null },
-        { image: IMAGES.m9, type:  0, data:null },
-        { image: IMAGES.m10, type:  0, data:null },
-        { image: IMAGES.m11, type:  0, data:null },
-        { image: IMAGES.m12, type:  0, data:null }
+        { image: IMAGES.m0, type:  NType.menu, data:Model.list0 },
+        { image: IMAGES.m1, type:  NType.menu, data:Model.list1 },
+        { image: IMAGES.m2, type:  NType.menu, data:Model.list2 },
+        { image: IMAGES.m3, type:  NType.menu, data:Model.list3 },
+        { image: IMAGES.m4, type:  NType.menu, data:Model.list4 },
+        { image: IMAGES.m5, type:  NType.menu, data:null },
+        { image: IMAGES.m6, type:  NType.text, data:null },
+        { image: IMAGES.m7, type:  NType.menu, data:null },
+        { image: IMAGES.m8, type:  NType.menu, data:null },
+        { image: IMAGES.m9, type:  NType.menu, data:null },
+        { image: IMAGES.m10, type:  NType.menu, data:null },
+        { image: IMAGES.m11, type:  NType.menu, data:null },
+        { image: IMAGES.m12, type:  NType.menu, data:null }
       ]
     }
   }
 
   actionOnRow(item, index) {
     console.log(index);
-    if (item.type == 1) { //text
+    if (item.type == NType.text) { //text
       //TODO
       return;
     }

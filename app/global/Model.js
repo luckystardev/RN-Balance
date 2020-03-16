@@ -1,4 +1,5 @@
 import IMAGES from './Image';
+import NType from './NType';
 
 import m1_0 from "../../assets/image/menu1/menu1_0.png"
 import m1_1 from "../../assets/image/menu1/menu1_1.png"
@@ -63,15 +64,6 @@ import m11_1 from "../../assets/image/menu11/menu11_1.png"
 
 import m12_0 from "../../assets/image/menu12/menu12_0.png"
 import m12_1 from "../../assets/image/menu12/menu12_1.png"
-
-const NType = {
-    menu    : 0,
-    audio   : 1,
-    video   : 2,
-    text    : 3,
-    social  : 4,
-    both    : 5
-}
 
 const Model = {    
     list0: [
