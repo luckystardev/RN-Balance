@@ -11,11 +11,13 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import First from './app/scenes/First';
 import Second from './app/scenes/Second';
+import TextScene from './app/scenes/TextScene';
 
 const AppNavigator = createStackNavigator(
   {
     First: First,
     Second: Second,
+    TextScene: TextScene,
   },
   {
     initialRouteName: 'First',
