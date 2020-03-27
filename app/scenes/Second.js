@@ -8,6 +8,7 @@ const deviceWidth = Dimensions.get('window').width;
 const height_list = deviceWidth / 326 * 151;
 const height_list2 = deviceWidth / 329 * 247;
 import Model from '../global/Model';
+import NType from '../global/NType';
 
 class Second extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class Second extends React.Component {
     console.log('Selected Item :',item.image);
     if (item.type == NType.text) {
       //TODO
+      this.props.navigation.navigate('TextScene');
       return;
     }
     // this.props.navigation.navigate('Second', {model: item.data,});

@@ -34,7 +34,7 @@ export default class First extends React.Component {
   actionOnRow(item, index) {
     console.log(index);
     if (item.type == NType.text) { //text
-      //TODO
+      this.props.navigation.navigate('TextScene');
       return;
     }
     this.props.navigation.navigate('Second', {model: item.data, index:index});

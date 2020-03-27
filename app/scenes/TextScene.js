@@ -1,42 +1,30 @@
 import React, { Component } from 'react';
 import {
-  View, StyleSheet, Image, FlatList, Dimensions, ImageBackground, TouchableWithoutFeedback
+  View, StyleSheet, Image, FlatList, Dimensions, Text
 } from 'react-native';
 import IMAGES from '../global/Image';
+// import TEXTS from '../global/Texts';
 
 const deviceWidth = Dimensions.get('window').width;
 const height_list = deviceWidth / 326 * 151;
 import Model from '../global/Model';
+// import t04 from "../../assets/text/Prvni_pomoc.rtf"
 
 class TextScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data_list: []
+      
     }
-  }
-
-  Doclick_viewDetail(index) {
-    console.log('Doclick_viewDetail:', index);
-    this.props.navigation.push('Second');
-  }
-
-  actionOnRow(item, index) {
-    console.log('Selected Item :',item.image);
-    if (item.type == NType.text) {
-      //TODO
-      return;
-    }
-    // this.props.navigation.navigate('Second', {model: item.data,});
   }
 
   render() {
     const { navigation } = this.props;
 
     return (
-        <ImageBackground source={IMAGES.bg} style={styles.container}>
+      <View style={styles.container}>
           
-        </ImageBackground>
+      </View>
     );
   }
 }
