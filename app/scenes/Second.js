@@ -25,7 +25,7 @@ class Second extends React.Component {
       this.props.navigation.navigate('TextScene');
       return;
     }
-    // this.props.navigation.navigate('Second', {model: item.data,});
+    this.props.navigation.navigate('VideoScene');
   }
 
   render() {
